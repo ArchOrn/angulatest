@@ -1,0 +1,21 @@
+{
+  "name": "angulatest",
+  "version": "0.1.0",
+  "description": "Angular testing for RAC.",
+  "authors": [
+    "Raphaël Kiffer"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "www/lib",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/ArchOrn/angulatest",
+  "dependencies": {
+    "bootstrap": "~3.3.4"
+  }
+}
