@@ -27,3 +27,8 @@ app.set('http-port', process.env.PORT || 5142);
 http.createServer(app).listen(app.get('http-port'), function () {
   console.log('Express HTTP server listening on port ' + app.get('http-port'));
 });
+
+// Livereload code
+var livereload = require('livereload');
+server = livereload.createServer();
+server.watch(__dirname + "/www");
