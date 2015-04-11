@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'chunksixroman';
+    src: url('../fonts/chunksix-webfont.eot');
+    src: url('../fonts/chunksix-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chunksix-webfont.woff2') format('woff2'),
+         url('../fonts/chunksix-webfont.woff') format('woff'),
+         url('../fonts/chunksix-webfont.ttf') format('truetype'),
+         url('../fonts/chunksix-webfont.svg#chunksixroman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

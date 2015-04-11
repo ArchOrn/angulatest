@@ -1,4 +1,4 @@
-var app = angular.module('angulatestApp', ['ngStorage']);
+var app = angular.module('UrfMadnessApp', ['ngStorage']);
 
 app.controller('HomeCtrl', function ($scope, $http, $localStorage) {
   // Default fact identifier value
