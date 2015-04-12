@@ -36,10 +36,19 @@
     </div>
   </nav>
 
+  <div class="logo">
+  </div>
+
   <div class="main" ng-controller="HomeCtrl">
-    <div class="wrapper center">
+    <div class="wrapper">
       <div class="fact">
-        <span>{{randomFact.value}}</span>
+        <div class="type-icon">
+          <img src="/img/icon_teemo.png"></img>
+        </div>
+        <span class="text"><span class="value">{{randomFact.value + units[randomFact.unit]}}</span> {{randomFact.sentence}}</span>
+        <a class="urf" ng-click="roll()">
+          Roll!
+        </a>
       </div>
     </div>
   </div>

@@ -7,6 +7,8 @@ $diamond-color: #00b3c0;
 $master-color: #606060;
 $challenger-color: #004799;
 
+$text-color: #2d4275;
+
 .bronze {
   background: url("/img/bronze_1.png") center center no-repeat;
   background-size: contain;
@@ -48,18 +50,23 @@ html, body {
 }
 
 body {
-  background: #d6f9ff; /* Old browsers */
-  background: -moz-linear-gradient(top,  #d6f9ff 0%, #9ee8fa 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d6f9ff), color-stop(100%,#9ee8fa)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #d6f9ff 0%,#9ee8fa 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #d6f9ff 0%,#9ee8fa 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #d6f9ff 0%,#9ee8fa 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  #d6f9ff 0%,#9ee8fa 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6f9ff', endColorstr='#9ee8fa',GradientType=0 ); /* IE6-9 */
+  background: url('/img/swirl_pattern.png') repeat;
+}
+
+.logo {
+  background: url("/img/urfmadness_logo.png") no-repeat;
+  background-size: contain;
+  left: 50%;
+  margin-left: -155px;
+  margin-top: 120px;
+  position: absolute;
+  height: 136px;
+  top: 0;
+  width: 300px;
 }
 
 .main {
-  background: url("/img/urf2015.png") center center no-repeat;
+  background: url("/img/wasteland_bg.png") bottom center no-repeat;
   display: table;
   height: 100%;
   width: 100%;
@@ -72,27 +79,86 @@ body {
 
 // Fact
 .fact {
-  background-color: rgba(255, 255, 255, 0.4);
-  border: 25px solid #FFF;
-  border-radius: 200px;
-  -webkit-box-shadow: 0px 0px 38px -5px rgba(78,92,94,1);
-  -moz-box-shadow: 0px 0px 38px -5px rgba(78,92,94,1);
-  box-shadow: 0px 0px 38px -5px rgba(78,92,94,1);
-  height: 400px;
-  line-height: 330px;
+  background-color: #FFF;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 18px -5px rgba(78,92,94,1);
+  -moz-box-shadow: 0px 0px 18px -5px rgba(78,92,94,1);
+  box-shadow: 0px 0px 18px -5px rgba(78,92,94,1);
+  height: 200px;
+  line-height: 180px;
   margin: 0 auto;
   padding: 10px;
+  position: relative;
   text-align: center;
   vertical-align: middle;
-  width: 400px;
-  span {
-    color: #2d4275;
+  width: 600px;
+  .type-icon {
+    left: -40px;
+    position: absolute;
+    top: -40px;
+    img {
+      border: 5px solid #FFF;
+      border-radius: 40px;
+      display: block;
+      height: 80px;
+      width: 80px;
+    }
+  }
+  .bubble-link {
+    background: url('/img/bubble-link.png') no-repeat;
+    bottom: 50px;
+    height: 85px;
+    left: -95px;
+    position: absolute;
+    width: 84px;
+    z-index: 2;
+  }
+  .urf {
+    background: url('/img/urf.png') no-repeat;
+    background-size: contain;
+    bottom: -70px;
+    color: #FFF;
+    cursor: pointer;
+    display: block;
+    font-family: 'source_sans_prosemibold';
+    font-size: 30px;
+    height: 100px;
+    left: 250px;
+    line-height: 125px;
+    position: absolute;
+    text-shadow: 2px 0 0 $text-color, -2px 0 0 $text-color, 0 2px 0 $text-color,
+    0 -2px 0 $text-color, 1px 1px $text-color, -1px -1px 0 $text-color,
+    1px -1px 0 $text-color, -1px 1px 0 $text-color;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    width: 100px;
+    z-index: 2;
+  }
+  .urf:active, .urf:focus, .urf:hover {
+    background-image: url('/img/urf_on.png');
+    display: block;
+    text-decoration: none;
+    text-shadow: 2px 0 0 #cc6811, -2px 0 0 #cc6811, 0 2px 0 #cc6811,
+    0 -2px 0 #cc6811, 1px 1px #cc6811, -1px -1px 0 #cc6811,
+    1px -1px 0 #cc6811, -1px 1px 0 #cc6811;
+  }
+  .text {
+    color: $text-color;
     display: inline-block;
-    font-size: 120px;
+    font-family: 'source_sans_prosemibold';
+    font-size: 28px;
     line-height: normal;
     text-align: center;
     vertical-align: middle;
-    width: 330px;
+    width: 580px;
+    .value {
+      text-shadow: 2px 0 0 $text-color, -2px 0 0 $text-color, 0 2px 0 $text-color,
+      0 -2px 0 $text-color, 1px 1px $text-color, -1px -1px 0 $text-color,
+      1px -1px 0 $text-color, -1px 1px 0 $text-color;
+      color: #FFF;
+      font-size: 36px;
+    }
   }
 }
 
@@ -101,8 +167,6 @@ body {
   background-color: transparent;
   border-bottom: 0;
   height: 80px;
-  .navbar-collapse {
-  }
   .navbar-nav {
     float: none;
     margin: 0 auto;
@@ -110,15 +174,28 @@ body {
     li {
       display: inline-block;
       float: none;
+      padding: 0;
       a {
-        border-radius: 0;
+        background-color: #47696B;
+        border-radius: 0 0 15px 15px;
+        -webkit-box-shadow: 0px 0px 12px -5px #000;
+        -moz-box-shadow: 0px 0px 12px -5px #000;
+        box-shadow: 0px 0px 12px -5px #000;
+        transition:All 0.5s ease;
+        -webkit-transition:All 0.5s ease;
+        -moz-transition:All 0.5s ease;
+        -o-transition:All 0.5s ease;
         color: transparent;
-        font-size: 20px;
+        height: 80px;
+        padding: 0;
         text-indent: -9999px;
-        width: 80px;
+        width: 100px;
       }
-      a:active, a:focus, a:hover {
+      a:active, a.active, a:focus, a:hover {
+        background-color: #FFF;
         color: transparent;
+        outline: 0 none;
+        height: 100px;
       }
     }
   }

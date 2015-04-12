@@ -6,12 +6,20 @@ app.controller('HomeCtrl', function ($scope, $http, $localStorage) {
 
   $http.get('/static/facts.json').then(function (result) {
     $scope.facts = result.data;
+    $scope.units = {
+      percentage: '%',
+      meters: 'm'
+    };
 
-    var id = 0;
-    do {
-      id = Math.floor(Math.random() * $scope.facts.length);
-    } while (id == $scope.$storage.factId);
-    $scope.$storage.factId = id;
-    $scope.randomFact = $scope.facts[id];
+    $scope.roll = function () {
+      var id = 0;
+      do {
+        id = Math.floor(Math.random() * $scope.facts.length);
+      } while (id == $scope.$storage.factId);
+      $scope.$storage.factId = id;
+      $scope.randomFact = $scope.facts[id];
+    }
+
+    $scope.roll();
   });
 });
