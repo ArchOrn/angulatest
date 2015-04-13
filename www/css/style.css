@@ -151,8 +151,13 @@ body {
         -moz-transition: All 0.5s ease;
         -o-transition: All 0.5s ease;
         width: 100px; }
-      .navbar .navbar-nav li a:active, .navbar .navbar-nav li a.active, .navbar .navbar-nav li a:focus, .navbar .navbar-nav li a:hover {
+      .navbar .navbar-nav li a:active, .navbar .navbar-nav li a.active, .navbar .navbar-nav li a:focus {
         background-color: #FFF;
+        color: transparent;
+        outline: 0 none;
+        height: 100px; }
+      .navbar .navbar-nav li a:hover {
+        background-color: #8EAAAA;
         color: transparent;
         outline: 0 none;
         height: 100px; }

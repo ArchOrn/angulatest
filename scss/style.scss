@@ -192,8 +192,14 @@ body {
         -o-transition:All 0.5s ease;
         width: 100px;
       }
-      a:active, a.active, a:focus, a:hover {
+      a:active, a.active, a:focus {
         background-color: #FFF;
+        color: transparent;
+        outline: 0 none;
+        height: 100px;
+      }
+      a:hover {
+        background-color: #8EAAAA;
         color: transparent;
         outline: 0 none;
         height: 100px;
